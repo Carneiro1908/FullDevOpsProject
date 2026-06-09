@@ -29,6 +29,6 @@ jobs:
 
       - name: Build, Tag, Push Image to Amazon ECR
         run: | 
-          sudo docker build -t mywebsite:v1.0 . 
-          sudo docker tag mywebsite:v1.0 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
-          sudo docker push 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
+          docker build -t mywebsite:v1.0 . 
+          docker tag mywebsite:v1.0 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
+          docker push 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
