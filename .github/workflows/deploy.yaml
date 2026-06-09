@@ -28,4 +28,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2.0.1
 
       - name: Build, Tag, Push Image to Amazon ECR
-        run: sudo docker build -t mywebsite:v1.0 . ; sudo docker tag mywebsite:v1.0 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0; sudo docker push 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
+        run: | 
+          sudo docker build -t mywebsite:v1.0 . 
+          sudo docker tag mywebsite:v1.0 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
+          sudo docker push 547320736290.dkr.ecr.eu-north-1.amazonaws.com/bar:v1.0
